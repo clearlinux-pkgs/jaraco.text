@@ -4,7 +4,7 @@
 #
 Name     : jaraco.text
 Version  : 3.2.0
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/03/3e/4fd93c4ca0524b3a55ab6c9a1cc5e2ec4fdbf6cfbf4c23a2fbfcf450e348/jaraco.text-3.2.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/03/3e/4fd93c4ca0524b3a55ab6c9a1cc5e2ec4fdbf6cfbf4c23a2fbfcf450e348/jaraco.text-3.2.0.tar.gz
 Summary  : Module for text manipulation
@@ -68,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583535145
+export SOURCE_DATE_EPOCH=1583536075
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -89,6 +89,9 @@ python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
+## Remove excluded files
+rm -f %{buildroot}/usr/lib/python3.*/site-packages/jaraco/__init__.py
+rm -f %{buildroot}/usr/lib/python3.*/site-packages/jaraco/__pycache__/__init__.*
 
 %files
 %defattr(-,root,root,-)
