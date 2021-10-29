@@ -4,7 +4,7 @@
 #
 Name     : jaraco.text
 Version  : 3.5.1
-Release  : 15
+Release  : 16
 URL      : https://files.pythonhosted.org/packages/53/d2/40ff557369eccee312b2d3ff4cb97373e8ffb25afb92294ff650a1e45795/jaraco.text-3.5.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/53/d2/40ff557369eccee312b2d3ff4cb97373e8ffb25afb92294ff650a1e45795/jaraco.text-3.5.1.tar.gz
 Summary  : Module for text manipulation
